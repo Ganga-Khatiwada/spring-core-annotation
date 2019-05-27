@@ -14,11 +14,11 @@ public class Main {
         System.out.println(movie.toString());
 
 
-        AnnotationConfigApplicationContext ctx2 = new AnnotationConfigApplicationContext();
-        ctx2.register(AppConfiguration.class);
-        ctx2.refresh();
-        Movie movies = (Movie) ctx2.getBean("Movie.class");
-        System.out.println("Actor " + movies.getActor().getName() + " of age "+movies.getActor().getAge()+" acted in " + movies.getMovieName());
+//        AnnotationConfigApplicationContext ctx2 = new AnnotationConfigApplicationContext();
+//        ctx2.register(AppConfiguration.class);
+//        ctx2.refresh();
+//        Movie movies = (Movie) ctx2.getBean("Movie.class");
+//        System.out.println("Actor " + movies.getActor().getName() + " of age "+movies.getActor().getAge()+" acted in " + movies.getMovieName());
 
 
 

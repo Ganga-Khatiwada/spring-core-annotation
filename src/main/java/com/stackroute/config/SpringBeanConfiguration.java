@@ -41,15 +41,15 @@ public class SpringBeanConfiguration {
 //        return movie1;
 //    }
 
-    @Bean(name = "Movie.class")
-    @Scope("prototype")
-    public Movie getMovies()
-    {
-        Actor actor=new Actor("Himanshu Kohli", "Male",25);
-
-        Movie movie=new Movie(1,"Baarish",actor);
-        return movie;
-    }
+//    @Bean(name = "Movie.class")
+//    @Scope("prototype")
+//    public Movie getMovies()
+//    {
+//        Actor actor=new Actor("Himanshu Kohli", "Male",25);
+//
+//        Movie movie=new Movie(1,"Baarish",actor);
+//        return movie;
+//    }
 //
 //    @Bean(name = "Movie.class,Movie.class")
 //    @Scope("prototype")
