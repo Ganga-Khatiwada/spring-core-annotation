@@ -1,5 +1,6 @@
 package com.stackroute.config;
 
+import com.stackroute.demo.BeanLifecycleDemoBean;
 import com.stackroute.domain.Actor;
 import com.stackroute.domain.Movie;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -24,6 +25,14 @@ public class SpringBeanConfiguration {
         //movie1.setActor(actor);
         return movie1;
     }
+
+    @Bean(name="BeanLifecycleDemoBean.class")
+    public BeanLifecycleDemoBean getBeanLifecycleDemoBean()
+    {
+        BeanLifecycleDemoBean beanLifecycleDemoBean=new BeanLifecycleDemoBean();
+        return beanLifecycleDemoBean;
+    }
+
 
 
 
