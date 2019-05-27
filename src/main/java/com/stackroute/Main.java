@@ -10,12 +10,28 @@ public class Main {
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
         ctx.register(AppConfiguration.class);
         ctx.refresh();
-
         Movie movie = (Movie) ctx.getBean("Movie.class");
-        System.out.println("MovieId:"+ movie.getMovieId());
-        System.out.println("MovieName:"+ movie.getMovieName());
-        System.out.println("ActorName:"+ movie.getActor().getName());
-        System.out.println("ActorAge:"+ movie.getActor().getAge());
-        System.out.println("ActorName:"+ movie.getActor().getGender());
+//        System.out.println("MovieId:"+ movie.getMovieId());
+//        System.out.println("MovieName:"+ movie.getMovieName());
+//        System.out.println("ActorName:"+ movie.getActor().getName());
+//        System.out.println("ActorAge:"+ movie.getActor().getAge());
+//        System.out.println("ActorName:"+ movie.getActor().getGender());
+        System.out.println(movie.toString());
+
+
+        AnnotationConfigApplicationContext ctxx = new AnnotationConfigApplicationContext();
+        ctxx.register(AppConfiguration.class);
+        ctxx.refresh();
+        Movie movie1 = (Movie) ctxx.getBean("Movie.class");
+        Movie movie2 = (Movie) ctxx.getBean("Movie.class");
+        System.out.println(movie1 == movie2);
+
+
+        AnnotationConfigApplicationContext ctx1 = new AnnotationConfigApplicationContext();
+        ctx1.register(AppConfiguration.class);
+        ctx1.refresh();
+        Movie movies = (Movie) ctx1.getBean("Movie.class,Movie.class");
+        System.out.println("Actor " + movies.getActor().getName() + " of age "+movies.getActor().getAge()+" acted in " + movies.getMovieName());
+
     }
 }
