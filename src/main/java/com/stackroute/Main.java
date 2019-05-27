@@ -2,12 +2,21 @@ package com.stackroute;
 
 import com.stackroute.config.AppConfiguration;
 import com.stackroute.demo.BeanLifecycleDemoBean;
+import com.stackroute.demo.BeanPostProcessorDemoBean;
 import com.stackroute.domain.Actor;
 import com.stackroute.domain.Movie;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {
     public static void main(String args[]) {
+
+        AnnotationConfigApplicationContext ctx1 = new AnnotationConfigApplicationContext();
+        ctx1.register(AppConfiguration.class);
+        ctx1.refresh();
+        BeanPostProcessorDemoBean beanPostProcessorDemoBean=(BeanPostProcessorDemoBean) ctx1.getBean("BeanPostProcessorDemoBean.class");
+        System.out.println(beanPostProcessorDemoBean);
+
+
 //        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
 //        ctx.register(AppConfiguration.class);
 //        ctx.refresh();
@@ -15,11 +24,12 @@ public class Main {
 //        System.out.println(movie.toString());
 
 
-        AnnotationConfigApplicationContext ctx1 = new AnnotationConfigApplicationContext();
-        ctx1.register(AppConfiguration.class);
-        ctx1.refresh();
-        BeanLifecycleDemoBean beanLifecycleDemoBean=(BeanLifecycleDemoBean) ctx1.getBean("BeanLifecycleDemoBean.class");
-        ctx1.destroy();
+//        AnnotationConfigApplicationContext ctx1 = new AnnotationConfigApplicationContext();
+//        ctx1.register(AppConfiguration.class);
+//        ctx1.refresh();
+//        BeanLifecycleDemoBean beanLifecycleDemoBean=(BeanLifecycleDemoBean) ctx1.getBean("BeanLifecycleDemoBean.class");
+//        ctx1.destroy();
+//        System.out.println(beanLifecycleDemoBean);
 
 
 //        AnnotationConfigApplicationContext ctx2 = new AnnotationConfigApplicationContext();
