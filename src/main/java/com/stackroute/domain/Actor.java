@@ -5,7 +5,7 @@ public class Actor {
         private String gender;
         private int age;
 
-        public Actor(String name, String gender, int age) {
+        public Actor() {
             this.name = name;
             this.gender = gender;
             this.age = age;
