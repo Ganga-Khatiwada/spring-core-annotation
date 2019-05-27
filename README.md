@@ -1,0 +1,2 @@
+Spring core Annotation exercizes.
+
