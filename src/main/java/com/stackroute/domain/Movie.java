@@ -7,11 +7,12 @@ public class Movie {
         private String movieName;
         private Actor actor;
 
-        public Movie() {
+        public Movie(int movieId,String movieName,Actor actor) {
             this.movieId = movieId;
             this.movieName = movieName;
             this.actor = actor;
         }
+        public Movie(){}
 
         @Autowired
         public Movie(Actor actor) {
